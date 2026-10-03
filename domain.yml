@@ -1,0 +1,75 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - plan_trip
+  - provide_destination
+  - provide_dates
+  - provide_budget
+  - provide_sustainability
+  - nlu_fallback
+
+entities:
+  - destination
+  - travel_dates
+  - budget
+  - sustainability_level
+
+slots:
+
+  destination:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: destination
+
+  travel_dates:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: travel_dates
+
+  budget:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: budget
+
+  sustainability_level:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: sustainability_level
+
+responses:
+
+  utter_greet:
+    - text: "Hello! I am your Eco-Travel Advisor. I can help you plan a more sustainable trip."
+
+  utter_goodbye:
+    - text: "Goodbye! Have a safe and sustainable journey."
+
+  utter_ask_destination:
+    - text: "Great! Where would you like to travel?"
+
+  utter_ask_dates:
+    - text: "What are your travel dates?"
+
+  utter_ask_budget:
+    - text: "What is your approximate travel budget?"
+
+  utter_ask_sustainability:
+    - text: "How important is sustainability to you: low, medium, or high?"
+
+  utter_trip_summary:
+    - text: "Thanks! Your destination is {destination}, your travel dates are {travel_dates}, your budget is {budget}, and your sustainability preference is {sustainability_level}."
+
+  utter_please_rephrase:
+    - text: "Sorry, I didn't understand that. Could you please rephrase your request?"
+
+  utter_default:
+    - text: "Sorry, I didn't understand that. Please try again using a clearer travel-related message."
+
+actions:
+  - action_recommend_trip

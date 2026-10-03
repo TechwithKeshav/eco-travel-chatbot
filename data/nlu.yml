@@ -1,0 +1,82 @@
+version: "3.1"
+
+nlu:
+
+- intent: greet
+  examples: |
+    - hello
+    - hi
+    - hey
+    - good morning
+    - good evening
+    - hello there
+    - hi there
+
+- intent: goodbye
+  examples: |
+    - bye
+    - goodbye
+    - see you
+    - see you later
+    - thanks bye
+    - talk to you later
+
+- intent: plan_trip
+  examples: |
+    - I want to plan a trip
+    - help me plan my journey
+    - I want an eco friendly trip
+    - help me travel sustainably
+    - I want to plan a holiday
+    - can you help me with my travel
+    - I need help planning a sustainable trip
+    - plan an eco friendly journey for me
+
+- intent: provide_destination
+  examples: |
+    - I want to go to [Paris](destination)
+    - my destination is [London](destination)
+    - I am travelling to [Berlin](destination)
+    - I want to visit [Rome](destination)
+    - take me to [Amsterdam](destination)
+    - I am going to [Barcelona](destination)
+    - I want to travel to [Madrid](destination)
+    - my trip is to [Vienna](destination)
+    - I want to visit [Prague](destination)
+    - I am heading to [Brussels](destination)
+
+- intent: provide_dates
+  examples: |
+    - I want to travel from [10 October to 15 October](travel_dates)
+    - my dates are [12 November to 18 November](travel_dates)
+    - I am travelling [5 December to 10 December](travel_dates)
+    - [20 October to 25 October](travel_dates)
+    - my trip is from [1 January to 7 January](travel_dates)
+    - [10 October to 15 October](travel_dates)
+    - [5 June to 12 June](travel_dates)
+
+- intent: provide_budget
+  examples: |
+    - my budget is [500 euros](budget)
+    - I can spend [700 euros](budget)
+    - my budget is [1000 euros](budget)
+    - I have [600 euros](budget)
+    - I want to spend around [800 euros](budget)
+    - my budget is [900 dollars](budget)
+    - I can spend around [400 euros](budget)
+    - I have a budget of [1200 euros](budget)
+    - around [750 euros](budget)
+    - my maximum budget is [1500 euros](budget)
+
+- intent: provide_sustainability
+  examples: |
+    - sustainability is [high](sustainability_level)
+    - I want [high](sustainability_level) sustainability
+    - [high](sustainability_level) sustainability
+    - [medium](sustainability_level) sustainability
+    - [low](sustainability_level) sustainability
+    - I prefer [high](sustainability_level) sustainability
+    - my sustainability preference is [medium](sustainability_level)
+    - sustainability level is [low](sustainability_level)
+    - I want the [high](sustainability_level) option
+    - my preference is [medium](sustainability_level)

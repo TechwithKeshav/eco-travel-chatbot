@@ -1,0 +1,30 @@
+version: "3.1"
+
+stories:
+
+- story: greet user
+  steps:
+    - intent: greet
+    - action: utter_greet
+
+- story: plan eco friendly trip
+  steps:
+    - intent: plan_trip
+    - action: utter_ask_destination
+
+    - intent: provide_destination
+    - action: utter_ask_dates
+
+    - intent: provide_dates
+    - action: utter_ask_budget
+
+    - intent: provide_budget
+    - action: utter_ask_sustainability
+
+    - intent: provide_sustainability
+    - action: action_recommend_trip
+
+- story: say goodbye
+  steps:
+    - intent: goodbye
+    - action: utter_goodbye

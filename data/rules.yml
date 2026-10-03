@@ -1,0 +1,43 @@
+version: "3.1"
+
+rules:
+
+- rule: respond to greeting
+  steps:
+    - intent: greet
+    - action: utter_greet
+
+- rule: start trip planning
+  steps:
+    - intent: plan_trip
+    - action: utter_ask_destination
+
+- rule: destination provided
+  steps:
+    - intent: provide_destination
+    - action: utter_ask_dates
+
+- rule: dates provided
+  steps:
+    - intent: provide_dates
+    - action: utter_ask_budget
+
+- rule: budget provided
+  steps:
+    - intent: provide_budget
+    - action: utter_ask_sustainability
+
+- rule: sustainability provided
+  steps:
+    - intent: provide_sustainability
+    - action: action_recommend_trip
+
+- rule: respond to goodbye
+  steps:
+    - intent: goodbye
+    - action: utter_goodbye
+
+- rule: handle NLU fallback
+  steps:
+    - intent: nlu_fallback
+    - action: utter_please_rephrase
