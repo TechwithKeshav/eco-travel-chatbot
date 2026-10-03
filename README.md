@@ -65,15 +65,12 @@ eco-travel-chatbot/
 
 # How to Run the Project
 
-## 1. Extract the ZIP File
+## 1. Clone the Repository
 
-Extract the project ZIP file to a convenient location, for example:
-
-```text
-Desktop\eco-travel-chatbot
+```bash
+git clone https://github.com/TechwithKeshav/eco-travel-chatbot.git
+cd eco-travel-chatbot
 ```
-
-Open the extracted folder in VS Code or Command Prompt.
 
 ---
 
